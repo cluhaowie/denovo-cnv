@@ -2,6 +2,7 @@ library(shiny)
 source("ShowSingleton.R")
 #del.dup.sl.unigene <- read.table("Data/del.dup.sl.unigene.uniq.txt",sep = "\t",header = T)
 #df <- del.dup.sl.unigene
+
 df <- cnv.sl.uniq.index
 server <- function(input, output) {
   output$table1 <- renderDataTable(df)
